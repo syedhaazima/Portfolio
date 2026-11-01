@@ -1,0 +1,76 @@
+
+@import "tailwindcss";
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #090612;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Text Selection */
+::selection {
+  background: #a855f7;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090612;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c084fc;
+}
+
+/* Common Styles */
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.purple-glow {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+/* Background Glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  right: -150px;
+  width: 450px;
+  height: 450px;
+  background: rgba(126, 34, 206, 0.08);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
